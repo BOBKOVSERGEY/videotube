@@ -1,0 +1,23 @@
+.nav-sidebar {
+    width: 240px;
+    background-color: var(--color-gray-light);
+    position: fixed;
+    top: 55px;
+    bottom: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+.nav-sidebar::-webkit-scrollbar {
+     width: 7px;
+     background-color: var(--color-gray-light);
+ }
+.nav-sidebar::-webkit-scrollbar-thumb {
+     background: var(--color-gray);
+     height: 71px;
+ }
+.nav-sidebar--hide {
+    visibility: hidden;
+}

@@ -1,0 +1,27 @@
+html {
+    /* font-size: 10px; */
+    font-size: 62.5%;
+}
+body {
+    background-color: #fafafa;
+    min-height: 100vh;
+    font-size: 1.6rem;
+    padding-top: 56px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    transition: all .3s;
+}
+a:hover {
+    text-decoration: none;
+}
+a:focus {
+     text-decoration: none;
+     outline: none;
+}
+.page {
+
+}
