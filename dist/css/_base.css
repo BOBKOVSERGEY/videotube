@@ -8,6 +8,14 @@ body {
     font-size: 1.6rem;
     padding-top: 56px;
 }
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: var(--color-gray-light);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--color-gray);
+    height: 71px;
+}
 img {
     max-width: 100%;
     height: auto;

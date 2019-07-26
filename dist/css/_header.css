@@ -35,7 +35,7 @@
 .header__btn-nav:focus{
     outline: none;
 }
-.header__logo {
+.header__logo img{
     width: 35px;
     margin-left: 20px;
     margin-right: 20px;
@@ -50,4 +50,25 @@
 }
 .header__logo a span{
     color: black;
+    margin-right: 30px;
+}
+.header__search {
+    flex: 1;
+    max-width: 60rem;
+    margin-right: 30px;
+}
+.header__user {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.header__user i {
+    display: block;
+    margin-right: 10px;
+    color: #333;
+    font-size: 2.9rem;
+}
+
+.header__user img {
+    max-width: 35px;
 }

@@ -1,0 +1,9 @@
+.upload-form {
+    width: 100%;
+    background: #fff;
+    padding: 15px;
+    border-radius: 2px;
+}
+.upload-form .form-control{
+    font-size: 1.6rem;
+}
