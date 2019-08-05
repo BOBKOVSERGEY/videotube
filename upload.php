@@ -6,8 +6,7 @@
                 $formProvider = new VideoDetailsFormProvider();
                 echo $formProvider->createUploadForm();
 
-                $categories = DB::query('SELECT * FROM categories');
-                debug($categories);
+
             ?>
 
         </div>

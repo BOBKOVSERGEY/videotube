@@ -10,6 +10,7 @@ class VideoDetailsFormProvider
                     $this->createTitleInput() .
                     $this->createDescriptionInput() .
                     $this->createPrivacyInput().
+                    $this->createCategoriesInput().
                 '</form>';
     }
 
@@ -43,5 +44,24 @@ class VideoDetailsFormProvider
                       <option value="1">Public</option>
                      </select>
                 </div>';
+    }
+
+    private function createCategoriesInput()
+    {
+        $html = '<div class="form-group">
+                  <select class="form-control" name="categoryInput">';
+
+        $categories = DB::query('SELECT * FROM categories');
+
+         foreach ($categories as $category) {
+         $html .= '<option value="'. $category['id'] .'">' . $category['name'] . '</option>';
+        }
+
+        $html .= '</select>
+                </div>';
+
+         return $html;
+
+
     }
 }
