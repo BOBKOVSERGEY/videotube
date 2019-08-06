@@ -11,6 +11,7 @@ class VideoDetailsFormProvider
                     $this->createDescriptionInput() .
                     $this->createPrivacyInput().
                     $this->createCategoriesInput().
+                    $this->createUploadButton().
                 '</form>';
     }
 
@@ -63,5 +64,10 @@ class VideoDetailsFormProvider
          return $html;
 
 
+    }
+
+    private function createUploadButton()
+    {
+        return '<button type="submit" class="btn btn-primary" name="uploadButton">Upload</button>';
     }
 }

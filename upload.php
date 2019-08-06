@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/inc/header.php'?>
+<?php require_once __DIR__ . '/inc/header.php'; ?>
 <div class="container-fluid">
     <div class="row">
         <div class="upload-form">

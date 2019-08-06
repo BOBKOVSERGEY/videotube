@@ -4,6 +4,6 @@
     padding: 15px;
     border-radius: 2px;
 }
-.upload-form .form-control{
+.upload-form .form-control, .upload-form button{
     font-size: 1.6rem;
 }
