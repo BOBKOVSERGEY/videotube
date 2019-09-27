@@ -52,7 +52,7 @@ class VideoDetailsFormProvider
         $html = '<div class="form-group">
                   <select class="form-control" name="categoryInput">';
 
-        $categories = DB::query('SELECT * FROM categories');
+        $categories = DB::fetchAll('SELECT * FROM categories');
 
          foreach ($categories as $category) {
          $html .= '<option value="'. $category['id'] .'">' . $category['name'] . '</option>';

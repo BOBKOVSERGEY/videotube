@@ -11,12 +11,14 @@ spl_autoload_register(function($className) {
     require __DIR__ . '/../classes/' . $className . '.php';
 });
 
-function debug($arr)
+function debug($array, $die = false)
 {
-    echo '<pre>';
-    print_r($arr);
+    echo '<pre style="font-size: 12px; color: green; ">';
+    print_r($array);
     echo '</pre>';
+    if ($die) die;
 }
+
 
 function redirect($http = false)
 {

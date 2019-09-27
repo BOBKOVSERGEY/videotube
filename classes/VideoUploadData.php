@@ -16,14 +16,14 @@ class VideoUploadData
             $description,
             $privacy,
             $category,
-            $upladedBy)
+            $uploadedBy)
     {
         $this->videoDataArray = $videoDataArray;
         $this->title = $title;
         $this->description = $description;
         $this->privacy = $privacy;
         $this->category = $category;
-        $this->upladedBy = $upladedBy;
+        $this->uploadedBy = $uploadedBy;
 
     }
 

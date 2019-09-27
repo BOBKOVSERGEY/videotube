@@ -12,11 +12,22 @@ class DB {
     public static function query($query, $params = [])
     {
         $statement = self::connect()->prepare($query);
-        $statement->execute($params);
+        return $statement->execute($params);
 
-        if (explode(' ', $query)[0] == 'SELECT') {
-            $data = $statement->fetchAll(PDO::FETCH_ASSOC);
-            return $data;
-        }
+    }
+
+    public static function fetchAll($query, $params = [])
+    {
+        $statement = self::connect()->prepare($query);
+        $statement->execute($params);
+        $data = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    public static function fetchOne($query, $params = [])
+    {
+        $statement = self::connect()->prepare($query);
+        $statement->execute($params);
+        $data = $statement->fetch(PDO::FETCH_ASSOC);
+        return $data;
     }
 }

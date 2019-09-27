@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 05 2019 г., 18:24
+-- Время создания: Сен 27 2019 г., 14:12
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.1.12
 
@@ -54,6 +54,32 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (14, 'Science & Technology'),
 (15, 'Nonprofits & Activism');
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `uploadedBy` varchar(50) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(1000) NOT NULL,
+  `privacy` int(11) NOT NULL,
+  `filePath` varchar(255) NOT NULL,
+  `category` int(11) NOT NULL,
+  `uploadDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `views` int(11) NOT NULL,
+  `duration` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `videos`
+--
+
+INSERT INTO `videos` (`id`, `uploadedBy`, `title`, `description`, `privacy`, `filePath`, `category`, `uploadDate`, `views`, `duration`) VALUES
+(1, 'REPLACE-THIS', 'wwwww', 'wwwwwwww', 1, 'uploads/videos/5d8dee254d3a6.mp4', 2, '2019-09-27 14:10:29', 0, '0');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -65,6 +91,12 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -73,6 +105,12 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT для таблицы `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
